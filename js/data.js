@@ -238,7 +238,7 @@ const CARS = [
   },
   {
     id: 'toyota-corolla-e30',
-    name: 'Toyota Corolla E30',
+    name: 'Toyota Corolla E70',
     country: 'japan',
     classId: 'compact',
     year: 1979,
@@ -455,6 +455,38 @@ const CARS = [
     bodyColor: '#e0a92e',
   },
 ];
+
+// Фотографии — свободно лицензированные снимки с Wikimedia Commons (вид спереди в перспективе)
+const PHOTOS = {
+  'ford-mustang-mach1': { file: 'images/ford-mustang-mach1.jpg', credit: 'Xnatedawgx', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:1973_Ford_Mustang_Mach_1,_front_three-quarter_view,_Golden_Super_Cruise_2026-06-06.jpg' },
+  'chevrolet-camaro-z28': { file: 'images/chevrolet-camaro-z28.jpg', credit: 'MercurySable99', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:1981_Chevrolet_Camaro_Z28,_front_left_(2023_ARMCO_Park_Wheels_of_Steel_Car_Cruise).jpg' },
+  'pontiac-firebird-trans-am': { file: 'images/pontiac-firebird-trans-am.jpg', credit: 'Elise240SX', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:1977_Pontiac_Firebird_Trans_Am_in_Brentwood_Brown,_Front_Right,_06-11-2022.jpg' },
+  'dodge-charger-se': { file: 'images/dodge-charger-se.jpg', credit: 'Greg Gjerdingen', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:1975_Dodge_Charger_SE_(28360396136).jpg' },
+  'chevrolet-corvette-c3': { file: 'images/chevrolet-corvette-c3.jpg', credit: 'Sicnag', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:1980_Chevrolet_C3_Corvette_(47405083292).jpg' },
+  'cadillac-eldorado': { file: 'images/cadillac-eldorado.jpg', credit: 'Mr.choppers', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:1976_Cadillac_Eldorado_Convertible_in_Firethorn,_front_left.jpg' },
+  'lincoln-continental-mark-v': { file: 'images/lincoln-continental-mark-v.jpg', credit: 'Greg Gjerdingen', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:1979_Lincoln_Continental_Mark_V_Collectors_Series.jpg' },
+  'jeep-cj7': { file: 'images/jeep-cj7.jpg', credit: 'CZmarlin — Christopher Ziemnowicz', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Jeep_CJ-7_red_open_Potomac_Maryland_1.jpg' },
+  'toyota-celica-gt': { file: 'images/toyota-celica-gt.jpg', credit: 'Tokumeigakarinoaoshima', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Toyota_CELICA_COUPE_2000GT_(A40)_front.jpg' },
+  'datsun-280z': { file: 'images/datsun-280z.jpg', credit: 'Mr.choppers', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:1978_Datsun_280Z_2-seater_in_Light_Blue_Metallic,_front_left.jpg' },
+  'mazda-rx7-sa22c': { file: 'images/mazda-rx7-sa22c.jpg', credit: 'Tokumeigakarinoaoshima', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Mazda_SAVANNA_RX-7_GT_(SA22C)_front.jpg' },
+  'honda-civic-cvcc': { file: 'images/honda-civic-cvcc.jpg', credit: 'James Hayward', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Honda_civic_gen1_1979_3_door_front.jpg' },
+  'toyota-corolla-e30': { file: 'images/toyota-corolla-e30.jpg', credit: 'Mr.choppers', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Toyota_Corolla_DX_sedan_(E70),_front_view,_Singapore.jpg' },
+  'datsun-510': { file: 'images/datsun-510.jpg', credit: 'Mr.choppers', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:1970-1972_Datsun_510_2-door_sedan_in_Mexican_Orange,_front_left.jpg' },
+  'mitsubishi-galant-lambda': { file: 'images/mitsubishi-galant-lambda.jpg', credit: 'Mr.choppers', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:1981_Dodge_Challenger_X,_front_left.jpg', note: 'на фото — Dodge Challenger, экспортная версия Galant Lambda под американским брендом' },
+  'subaru-leone-4wd-estate': { file: 'images/subaru-leone-4wd-estate.jpg', credit: 'Jeremy from Sydney, Australia', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:1979_Subaru_1600_4WD_station_wagon_(21893971703).jpg' },
+  'bmw-30-csl': { file: 'images/bmw-30-csl.jpg', credit: 'Robotriot', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:BMW_3.0_CSL_Front.jpg' },
+  'bmw-m1': { file: 'images/bmw-m1.jpg', credit: 'Luc106', license: 'Public domain', source: 'https://commons.wikimedia.org/wiki/File:BMW_M1_Front-view.JPG' },
+  'mercedes-450sl-r107': { file: 'images/mercedes-450sl-r107.jpg', credit: 'Ethan Llamas', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:Mercedes-Benz_R107_450SL_red_(1).jpg' },
+  'porsche-911-turbo-930': { file: 'images/porsche-911-turbo-930.jpg', credit: 'Charles from Port Chester, New York', license: 'CC BY 2.0', source: 'https://commons.wikimedia.org/wiki/File:Porsche_911_Turbo_(1987)_(52574988328).jpg' },
+  'vw-golf-gti-mk1': { file: 'images/vw-golf-gti-mk1.jpg', credit: 'JulianFranco', license: 'CC BY-SA 3.0', source: 'https://commons.wikimedia.org/wiki/File:Golf_GTI_Mk1.JPG' },
+  'audi-quattro': { file: 'images/audi-quattro.jpg', credit: 'Daniel Milner', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:1988_Audi_Quattro_in_Red_-_Front.jpg' },
+  'mercedes-280e-w123': { file: 'images/mercedes-280e-w123.jpg', credit: 'Elise240SX', license: 'CC BY-SA 4.0', source: 'https://commons.wikimedia.org/wiki/File:1979-1982_Mercedes-Benz_W123_in_Champagne_Metallic,_front_right,_2023-07-27.jpg' },
+  'opel-manta-gte': { file: 'images/opel-manta-gte.jpg', credit: 'Rudolf Stricker', license: 'Attribution', source: 'https://commons.wikimedia.org/wiki/File:Opel_Manta_GTE_front_20080723.jpg' },
+};
+
+CARS.forEach((car) => {
+  car.photo = PHOTOS[car.id];
+});
 
 const MAX_POWER = Math.max(...CARS.map((c) => c.power));
 const MAX_SPEED = 300; // шкала спидометра, км/ч

@@ -86,10 +86,9 @@
 
     gridEl.innerHTML = models
       .map((car) => {
-        const shapeKey = CLASSES[car.classId].shape;
         return `
         <article class="car-card" data-id="${car.id}" tabindex="0" role="button" aria-label="Открыть карточку ${car.name}">
-          <div class="car-card-illustration">${carSilhouetteSVG(shapeKey, car.bodyColor)}</div>
+          <div class="car-card-illustration"><img class="car-card-photo" src="${car.photo.file}" alt="${car.name}, вид спереди в перспективе" loading="lazy"></div>
           <div class="car-card-badges">
             ${badgeHTML('country', car.country)}
             ${badgeHTML('class', car.classId)}
@@ -155,13 +154,16 @@
   }
 
   function renderDetail(car) {
-    const shapeKey = CLASSES[car.classId].shape;
     const powerPct = Math.round((car.power / MAX_POWER) * 100);
+    const photoNote = car.photo.note ? ` · ${car.photo.note}` : '';
 
     detailSection.innerHTML = `
       <button type="button" id="detail-close" class="detail-close" aria-label="Закрыть карточку модели">×</button>
       <div class="detail-grid">
-        <div class="detail-illustration">${carSilhouetteSVG(shapeKey, car.bodyColor)}</div>
+        <div class="detail-illustration">
+          <img class="detail-photo" src="${car.photo.file}" alt="${car.name}, вид спереди в перспективе">
+          <p class="photo-credit">Фото: <a href="${car.photo.source}" target="_blank" rel="noopener noreferrer">${car.photo.credit}</a> · ${car.photo.license}, Wikimedia Commons${photoNote}</p>
+        </div>
         <div class="detail-body">
           <div class="detail-badges">
             ${badgeHTML('country', car.country)}

@@ -197,15 +197,41 @@ a {
 
 .car-card-illustration {
   width: 100%;
-  aspect-ratio: 300 / 140;
+  aspect-ratio: 4 / 3;
   margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #0e1014;
 }
 
-.car-card-illustration svg,
-.detail-illustration svg {
+.car-card-photo {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   display: block;
+}
+
+.detail-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.photo-credit {
+  margin: 8px 0 0;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.photo-credit a {
+  color: var(--text-dim);
+  text-decoration: underline;
+}
+
+.photo-credit a:hover {
+  color: var(--accent);
 }
 
 .car-card-badges {
