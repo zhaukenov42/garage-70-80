@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GARAGE 70/80 — ретро-автомобили США, Японии и Германии</title>
+  <meta name="description" content="Информационный справочник по классическим автомобилям 1970–1989 годов из США, Японии и Германии." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">
+        <span class="brand-mark">GARAGE</span><span class="brand-decade">70/80</span>
+      </div>
+      <p class="brand-tagline">Классические автомобили США, Японии и Германии · 1970–1989</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="filters" aria-label="Фильтры каталога">
+      <div class="filter-field">
+        <label for="country-select">Страна</label>
+        <select id="country-select"></select>
+      </div>
+      <div class="filter-field">
+        <label for="class-select">Класс</label>
+        <select id="class-select"></select>
+      </div>
+      <div class="filter-field">
+        <label for="model-select">Модель</label>
+        <select id="model-select"></select>
+      </div>
+      <p id="results-counter" class="results-counter" aria-live="polite"></p>
+    </section>
+
+    <section id="detail" class="detail" hidden aria-live="polite"></section>
+
+    <section class="grid-section">
+      <div id="car-grid" class="car-grid"></div>
+      <div id="empty-state" class="empty-state" hidden>
+        <p>По выбранным фильтрам ничего не найдено.</p>
+        <p class="empty-state-sub">Попробуйте выбрать другую страну или класс автомобиля.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>GARAGE 70/80 — информационный проект. Технические характеристики и цены приблизительны и приведены на основе общедоступных исторических данных. Иллюстрации — стилизованные векторные силуэты.</p>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/shapes.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
